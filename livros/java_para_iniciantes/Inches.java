@@ -1,6 +1,7 @@
 /*
 Calcula quantas polegadas cúbicas há em uma milha cúbica. 
 */
+
 package livros.java_para_iniciantes;
 
 class Inches {
