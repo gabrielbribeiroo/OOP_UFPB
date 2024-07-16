@@ -1,3 +1,7 @@
+/*
+Demonstração de variável
+*/
+
 package livros.java_para_iniciantes;
 
 public class Exemplo2 {
