@@ -1,3 +1,7 @@
+/*
+Calcula o peso na lua. 
+*/
+
 package livros.java_para_iniciantes;
 
 public class Moon {
