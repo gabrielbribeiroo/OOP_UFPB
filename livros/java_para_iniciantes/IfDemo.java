@@ -1,3 +1,7 @@
+/*
+Demonstração da instrução if.
+*/
+
 package livros.java_para_iniciantes;
 
 public class IfDemo {
