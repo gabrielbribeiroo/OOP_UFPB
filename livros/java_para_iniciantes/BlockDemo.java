@@ -1,3 +1,7 @@
+/*
+Demonstração de um bloco de código.
+*/
+
 package livros.java_para_iniciantes;
 
 public class BlockDemo {
