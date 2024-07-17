@@ -1,3 +1,7 @@
+/*
+Tabela de conversão de polegadas para metros. 
+*/
+
 package livros.java_para_iniciantes;
 
 public class InchToMeterTable {
