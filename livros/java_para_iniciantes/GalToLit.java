@@ -1,3 +1,7 @@
+/*
+Conversão de galões em litros.
+*/
+
 package livros.java_para_iniciantes;
 
 public class GalToLit {
