@@ -1,3 +1,7 @@
+/*
+Demonstração do laço de repetição for.
+*/
+
 package livros.java_para_iniciantes;
 
 public class ForDemo {
