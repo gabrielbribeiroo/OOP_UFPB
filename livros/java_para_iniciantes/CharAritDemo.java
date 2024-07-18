@@ -16,6 +16,5 @@ public class CharAritDemo {
 
         ch = 90; // ch pode receber valores inteiros
         System.out.println("ch is now " + ch);
-
     }
 }
