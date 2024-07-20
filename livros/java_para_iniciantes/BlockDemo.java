@@ -2,6 +2,8 @@
 Demonstração de um bloco de código.
 */
 
+package livros.java_para_iniciantes;
+
 public class BlockDemo {
     public static void main(String[] args) {
         double i, j, d;
