@@ -28,7 +28,7 @@ public:
     }
 };
 
-int main(void){
+int main(void) {
     motor m1(2.0);
     carro c1(5, m1);
 
