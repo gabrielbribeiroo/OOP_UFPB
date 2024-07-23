@@ -26,10 +26,13 @@ public:
     double get_cilindradas() {
         return m.get_cilindradas();
     }
+    void set_motor(motor &mm) {
+        m = mm;
+    }
 };
 
 int main(void) {
-    motor m1(2.0);
+    motor m1(2.2);
     carro c1(5, m1);
 
     std::cout << c1.get_cilindradas() << std::endl;
