@@ -9,6 +9,7 @@ public:
     }
     coisa(coisa &c) {
         x = c.x;
+        std::cout << "coisa(" << x << ")" << std::endl;
     }
     ~coisa() {
         std::cout << "~coisa(" << x << ")" << std::endl;
