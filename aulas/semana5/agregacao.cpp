@@ -33,8 +33,11 @@ public:
 		qtd_alunos++;
 	}
 
-	// INSEGURO!! VIOLA ENCAPSULAMENTO!!
-	// aluno *get_alunos() { return alunos; }
+	aluno *get_aluno(int i) {
+		return alunos[i];
+	}
+
+	// aluno *get_alunos() { return alunos; } // INSEGURO!! VIOLA ENCAPSULAMENTO!!
 	void print_info() {
 		std::cout << "turma(" << sala << ")";
 		std::cout << std::endl;
@@ -60,6 +63,20 @@ int main(void) {
 
 	t1.print_info();
 	t2.print_info();
+	
+	aluno* ptr = t1.get_aluno(0);
+
+	std::cout << "Exibindo indice 0 de t1" << std::endl;
+	ptr->print_info();
+
+	aluno a4(1014, 7.5);
+	ptr = &a4;
+
+	std::cout << "Exibindo a4 via ptr" << std::endl;
+	ptr->print_info();
+
+	std::cout << "Exibindo t1: " << std::endl;
+	t1.print_info();
 
 	return 0;
 }
