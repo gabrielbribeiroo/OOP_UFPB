@@ -8,6 +8,7 @@ using std::endl;
 livro::livro(const string &t, int a, std::shared_ptr<autor> au): titulo(t), ano(a), autor_livro(au) {
     cout << "Livro: " << titulo << " criado!" << endl;
 }
+
 livro::~livro() {
     cout << "Livro: " << titulo << " destruido!" << endl;
 }
@@ -37,6 +38,7 @@ void livro::set_autor(std::shared_ptr<autor> au) {
 }
 
 void livro::print_info() {
+    cout << "*********************************" << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Ano: " << ano << endl;
     cout << "Autor: " << endl; 
