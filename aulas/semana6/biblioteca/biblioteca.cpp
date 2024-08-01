@@ -13,6 +13,7 @@ biblioteca::biblioteca(const string &n, const string &e) : nome(n), endereco(e) 
     num_livros = 0;
     cout << "Biblioteca: " << nome << " criada!" << endl;
 }
+
 biblioteca::~biblioteca() {
     cout << "Biblioteca: " << nome << " destruida!" << endl;
 }
