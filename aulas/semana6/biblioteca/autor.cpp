@@ -7,39 +7,41 @@ using std::cout;
 using std::endl;
 using std::string;
 
-    autor::autor(const string &n, const string &d, const string &na) : nome(n), data_nascimento(d), nacionalidade(na) {
-        cout << "Autor: " << nome << " criado!" << endl;
-    }
-    autor::~autor() {
-        cout << "Autor: " << nome << " destruido!" << endl;
-    }
+autor::autor(const string &n, const string &d, const string &na) : nome(n), data_nascimento(d), nacionalidade(na) {
+    cout << "Autor: " << nome << " criado!" << endl;
+}
 
-    string autor::get_nome() {
-        return nome;
-    }
+autor::~autor() {
+    cout << "Autor: " << nome << " destruido!" << endl;
+}
 
-    void autor::set_nome(const string &n) {
-        nome = n;
-    }
+string autor::get_nome() {
+    return nome;
+}
 
-    string autor::get_data_nascimento() {
-        return data_nascimento;
-    }
+void autor::set_nome(const string &n) {
+    nome = n;
+}
 
-    void autor::set_data_nascimento(const string &d) {
-        data_nascimento = d;
-    }
+string autor::get_data_nascimento() {
+    return data_nascimento;
+}
 
-    string autor::get_nacionalidade() {
-        return nacionalidade;
-    }
+void autor::set_data_nascimento(const string &d) {
+    data_nascimento = d;
+}
 
-    void autor::set_nacionalidade(const string &na) {
-        nacionalidade = na;
-    }
+string autor::get_nacionalidade() {
+    return nacionalidade;
+}
 
-    void autor::print_info() {
-        cout << "Nome: " << nome << endl;
-        cout << "Data de nascimento: " << data_nascimento << endl;
-        cout << "Nacionalidade: " << nacionalidade << endl;
-    }
+void autor::set_nacionalidade(const string &na) {
+    nacionalidade = na;
+}
+
+void autor::print_info() {
+    cout << "-------------------------------" << endl;
+    cout << "Nome: " << nome << endl;
+    cout << "Data de nascimento: " << data_nascimento << endl;
+    cout << "Nacionalidade: " << nacionalidade << endl;
+}
