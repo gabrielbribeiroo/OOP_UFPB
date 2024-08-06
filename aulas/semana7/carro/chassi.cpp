@@ -4,8 +4,7 @@
 using std::cout;
 using std::endl;
 
-chassi::chassi(const string& m, const string& s):
-			material(m), serial(s) {
+chassi::chassi(const string &m, const string &s): material(m), serial(s) {
 	cout << "chassi(" << material << ", ";
 	cout << serial << ")" << endl;
 }
