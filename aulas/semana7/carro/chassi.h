@@ -9,7 +9,7 @@ class chassi {
 	string material;
 	string serial;
 public:
-	chassi(const string& m, const string& s);
+	chassi(const string &m, const string &s);
 	~chassi();
 
 	void suportar();
