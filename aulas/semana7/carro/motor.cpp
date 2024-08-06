@@ -10,7 +10,6 @@ motor::motor(const string &m, double c): modelo(m), cilindradas(c) {
 
 motor::~motor() {
 	cout << "~motor(" << modelo << ")" << endl;
-
 }
 
 void motor::ligar() {

@@ -4,13 +4,8 @@
 using std::cout;
 using std::endl;
 
-carro::carro(const string &p, std::unique_ptr<motor> m,
-                std::unique_ptr<roda> r,
-                std::unique_ptr<chassi> c): 
-					   placa(p),
-					   carro_motor(std::move(m)),
-					   carro_roda(std::move(r)),
-					   carro_chassi(std::move(c)) {
+carro::carro(const string &p, std::unique_ptr<motor> m, std::unique_ptr<roda> r, std::unique_ptr<chassi> c): 
+					placa(p), carro_motor(std::move(m)), carro_roda(std::move(r)), carro_chassi(std::move(c)) {
 	cout << "carro(" << placa << ") " << endl;
 }
 

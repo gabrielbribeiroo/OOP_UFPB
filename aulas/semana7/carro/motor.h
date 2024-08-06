@@ -11,7 +11,6 @@ class motor {
 public:
 	motor(const string &m, double c);
 	~motor();
-
 	void ligar();
 };
 

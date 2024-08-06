@@ -11,7 +11,6 @@ class chassi {
 public:
 	chassi(const string &m, const string &s);
 	~chassi();
-
 	void suportar();
 };
 

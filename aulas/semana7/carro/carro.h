@@ -15,9 +15,7 @@ class carro {
 	std::unique_ptr<chassi> carro_chassi;
 	std::unique_ptr<roda> carro_roda;
 public:
-	carro(const string &p, std::unique_ptr<motor> m,
-		std::unique_ptr<roda> r,
-		std::unique_ptr<chassi> c);
+	carro(const string &p, std::unique_ptr<motor> m, std::unique_ptr<roda> r, std::unique_ptr<chassi> c);
 	~carro();
 	void ligar();
 	void set_motor(std::unique_ptr<motor> nm);
