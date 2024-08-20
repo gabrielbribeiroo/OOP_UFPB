@@ -16,6 +16,10 @@ int main() {
     bool is_individual;
     int ano_medalha;
 
+    cout << "------------------" << endl;
+    cout << "CADASTRO DE ATLETA" << endl;
+    cout << "------------------" << endl;
+ 
     // Solicitando informações do país
     cout << "Digite o nome do país: ";
     std::getline(cin, nome_pais);
@@ -52,7 +56,9 @@ int main() {
 
     medal->print_info(); // Exibindo informações da medalha
 
-    cout << "Fim do programa." << endl; // Encerramento do programa
+    cout << "------------------" << endl;
+    cout << " Fim do cadastro." << endl; // Encerramento do programa
+    cout << "------------------" << endl;
 
     return 0;
 }
