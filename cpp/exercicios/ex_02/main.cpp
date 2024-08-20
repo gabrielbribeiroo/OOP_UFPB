@@ -21,9 +21,9 @@ int main() {
     cout << "------------------" << endl;
  
     // Solicitando informações do país
-    cout << "Digite o nome do país: ";
+    cout << "Digite o nome do pais: ";
     std::getline(cin, nome_pais);
-    cout << "Digite o continente do país: ";
+    cout << "Digite o continente do pais: ";
     std::getline(cin, continente);
 
     auto pais = std::make_unique<Pais>(nome_pais, continente); // Criação do objeto da classe Pais
@@ -31,7 +31,7 @@ int main() {
     // Solicitando informações da modalidade
     cout << "Digite o nome da modalidade: ";
     std::getline(cin, nome_modalidade);
-    cout << "A modalidade é individual? (1 para sim, 0 para não): ";
+    cout << "A modalidade eh individual? (1 para sim, 0 para não): ";
     cin >> is_individual;
     cin.ignore(); // Ignorar o newline que ficou no buffer
 
