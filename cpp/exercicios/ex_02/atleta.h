@@ -10,8 +10,8 @@ using std::string;
 class atleta {
 private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
     string nome; // Nome do atleta
-    std::unique_ptr<pais> pais; // Ponteiro inteligente para o objeto da classe pais (composição)
-    std::unique_ptr<modalidade> modalidade; // Ponteiro inteligente para o objeto da classe modalidade (agregação)
+    std::unique_ptr<pais> p; // Ponteiro inteligente para o objeto da classe pais (composição)
+    std::unique_ptr<modalidade> m; // Ponteiro inteligente para o objeto da classe modalidade (agregação)
 
 public: // Definição dos atributos de encapsulamento public (acessados dentro e fora da classe)
     // Métodos construtor (aloca memória) e destrutor (desaloca memória)
