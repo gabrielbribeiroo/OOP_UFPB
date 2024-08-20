@@ -28,7 +28,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     Modalidade *get_modalidade() const; // Retorna o nome da modalidade praticada pelo atleta
     void set_modalidade(std::unique_ptr<Modalidade> modalidade); // Modifica o nome da modalidade praticada pelo atleta
 
-    void print_info(); // Exibe as informações do atleta, incluindo seu país e modalidade praticada
+    void print_info() const; // Exibe as informações do atleta, incluindo seu país e modalidade praticada
 };
 
 #endif // Fim da verificação de inclusão ATLETA_H

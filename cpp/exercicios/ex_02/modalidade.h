@@ -22,7 +22,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     bool is_individual() const; // Verifica e retorna o tipo da modalidade (individual/coletiva)
     void set_individual(bool individual); // Modifica o tipo de modalidade
 
-    void print_info(); // Exibe as informações da modalidade esportiva
+    void print_info() const; // Exibe as informações da modalidade esportiva
 };
 
 #endif // Fim da verificação de inclusão MODALIDADE_H

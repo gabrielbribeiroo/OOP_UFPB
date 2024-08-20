@@ -39,7 +39,7 @@ void Atleta::set_modalidade(std::unique_ptr<Modalidade> m) {
 }
 
 // Exibe as informações do atleta
-void Atleta::print_info() {
+void Atleta::print_info() const {
     cout << "Atleta: " << nome << endl;
     pais->print_info();
     modalidade->print_info();

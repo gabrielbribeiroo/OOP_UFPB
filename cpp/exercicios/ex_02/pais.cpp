@@ -1,4 +1,4 @@
-#include "Pais.h" // Inclui o cabeçalho correspondente
+#include "pais.h" // Inclui o cabeçalho correspondente
 #include <iostream> // Inclui a biblioteca para operações de entrada/saída
 
 using std::cout;
@@ -30,7 +30,7 @@ void Pais::set_continente(const std::string &c) {
 }
 
 // Exibe as informações do país
-void Pais::print_info() {
+void Pais::print_info() const {
     cout << "Pais: " << nome << endl;
     cout << "Continente: " << continente << endl;
 }

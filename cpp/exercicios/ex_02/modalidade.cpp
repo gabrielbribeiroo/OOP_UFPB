@@ -1,4 +1,4 @@
-#include "Modalidade.h" // Inclui o cabeçalho correspondente
+#include "modalidade.h" // Inclui o cabeçalho correspondente
 #include <iostream> // Inclui a biblioteca para operações de entrada/saída
 
 using std::cout;
@@ -30,7 +30,7 @@ void Modalidade::set_individual(bool i) {
 }
 
 // Exibe as informações da modalidade
-void Modalidade::print_info() {
+void Modalidade::print_info() const{
     cout << "Modalidade: " << nome << endl;
     cout << "Tipo: " << (individual ? "Individual" : "Coletiva") << endl;
 }

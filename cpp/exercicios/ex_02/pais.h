@@ -22,7 +22,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     string get_continente() const; // Retorna o nome do continente
     void set_continente(const string &continente); // Modifica o nome do continente
     
-    void print_info(); // Exibe as informações do país
+    void print_info() const; // Exibe as informações do país
 };
 
 #endif // Fim da verificação de inclusão PAIS_H

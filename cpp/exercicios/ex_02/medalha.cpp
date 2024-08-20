@@ -47,7 +47,7 @@ void Medalha::set_modalidade(std::unique_ptr<Modalidade> m) {
 }
 
 // Exibe as informações acerca da medalha conquistada
-void Medalha::print_info() {
+void Medalha::print_info() const {
     std::cout << "Medalha: " << tipo << ", Ano: " << ano << std::endl;
     atleta->print_info();
     modalidade->print_info();

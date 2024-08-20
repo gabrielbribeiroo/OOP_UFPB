@@ -28,7 +28,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     Modalidade *get_modalidade() const; // Retorna as informações da modalidade esportiva, na qual foi medalhista (através de smart pointer)
     void set_modalidade(std::unique_ptr<Modalidade> modalidade); // Modifica as informações da modalidade esportiva, na qual foi medalhista (através de smart pointer)
 
-    void print_info(); // Exibe as informações da medalha conquistada, incluindo o atleta e a modalidade esportiva
+    void print_info() const; // Exibe as informações da medalha conquistada, incluindo o atleta e a modalidade esportiva
 };
 
 #endif // Fim da verificação de inclusão MEDALHA_H
