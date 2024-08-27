@@ -7,11 +7,18 @@ using std::string;
 
 class Animal {
     int idade; // Atributo privado
+protected:
+    int var;
 public:
     // Método construtor inicializando a idade com 0 (caso não seja passado o valor)
     Animal(int i=0): idade(i) {
         cout << "animal(" << idade << ")" << endl;
     } 
+
+    // Método destrutor
+    ~Animal() {
+        cout << "~animal(" << idade << ")" << endl;
+    }
 
     int get_idade() {
         return idade; // Retorna a idade 
@@ -25,8 +32,6 @@ public:
     void print_info() {
         cout << "animal(" << idade << ")" << endl;
     }
-
-    ~Animal() {} // Método destrutor
 };
 
 // Herança (a classe Cachorro(classe derivada) é um subtipo/especialização da classe Animal(classe base))
@@ -38,6 +43,12 @@ public:
     Cachorro(int i, const string &l): Animal(i), latido(l) {
         // Passa o valor inteiro (inicializando a idade) para o construtor de Animal e a string para o atributo interno
         cout << "cachorro(" << get_idade() << ", " << latido << ")" << endl;
+        var = 1000;
+    } 
+
+    // Método destrutor
+    ~Cachorro() {
+        cout << "~cachorro(" << get_idade() << ", " << latido << ")" << endl;
     } 
 
     string get_latido() {
@@ -52,8 +63,6 @@ public:
     void print_info() {
         cout << "cachorro(" << get_idade() << ", " << latido << ")" << endl;
     } 
-
-    ~Cachorro() {} // Método destrutor
 };
 
 int main() {
@@ -63,9 +72,15 @@ int main() {
     // c2.print_info(); // Exibe as informações do objeto c2
 
     cout << endl;
+    c1.print_info();
+	c2.print_info();
+	cout << endl;
+    
+    /*
     Animal *pa = &c1; // Ponteiro pa da classe Animal (apenas métodos da classe animal) aponta para o endereço de memória de c1
     pa->set_idade(10); // Modifica a idade para 10
     pa->print_info(); // Exibe as informações após atualizações
+    */
 
     return 0;
 }   
