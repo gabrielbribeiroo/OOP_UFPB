@@ -24,9 +24,7 @@ public:
         cor = c;
     }
 
-    virtual double get_area() const {
-        return 0;
-    }
+    virtual double get_area() = 0;
 };
 
 class Circulo : public Poligono {
@@ -47,7 +45,7 @@ public:
         raio = r;
     }
 
-    double get_area() const {
+    virtual double get_area() {
         return (PI*raio*raio);
     }
 };
@@ -79,7 +77,7 @@ public:
         altura = a;
     }
 
-    double get_area() const {
+    virtual double get_area() {
         return base*altura;
     }
 };
@@ -111,7 +109,7 @@ public:
         altura = a;
     }
 
-    double get_area() const {
+    virtual double get_area() {
         return (base*altura)/2;
     }
 };
@@ -152,7 +150,7 @@ public:
         altura = a;
     }
 
-    double get_area() const {
+    virtual double get_area() {
         return ((base_maior+base_menor)*altura)/2;
     }
 };
