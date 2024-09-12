@@ -10,10 +10,12 @@ class Ponto {
 public:
     Ponto(double xx, double yy): x(xx), y(yy) {
         contador++;
+        cout << "ponto()" << endl;
     }
 
     ~Ponto() {
         contador--;
+        cout << "~ponto()" << endl;
     }
 
     static int get_contador() {
@@ -35,6 +37,9 @@ int main() {
 
     Ponto p2(3.4, 6.5);
     p2.print_info();
+
+    Ponto *pp3 = new Ponto(1.2, 3.5);
+    pp3->print_info();
 
     cout << "Existem " << Ponto::get_contador() << " pontos." << endl;
 }
