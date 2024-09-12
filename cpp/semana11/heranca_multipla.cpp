@@ -9,7 +9,7 @@ class Pessoa {
     string nome;
     int idade;
 public:
-    Pessoa() {} // Construtor vazio
+    // Pessoa() {} // Construtor vazio
     Pessoa(const string &n, int i): nome(n), idade(i) {}
 
     string get_nome() const {
@@ -68,11 +68,11 @@ public:
 // Herança múltipla pode possuir diferentes tipos entre elas
 class Vendedor_Gerente : public Vendedor, public Gerente {
 public:
-    Vendedor_Gerente(const string &n, int i, double m, const string &d): Vendedor(n, i, m), Gerente(n, i, d) {}
+    Vendedor_Gerente(const string &n, int i, double m, const string &d): Pessoa(n, i), Vendedor(n, i, m), Gerente(n, i, d) {}
 
     void print_info() {
         cout << "--------------------------" << endl;
-        cout << "vendedor_gerente" << endl;
+        cout << "vendedor_gerente:" << endl;
         Vendedor::print_info();
         Gerente::print_info();
         cout << "--------------------------" << endl;
@@ -82,9 +82,10 @@ public:
 int main() {
     Vendedor_Gerente vg1("Joao", 30, 5000, "ELETRO");
 
-    vg1.set_nome("Jose");
+    // vg1.set_nome("Jose");
     
     cout << "Nome: " << vg1.get_nome() << endl;
+    cout << "Idade: " << vg1.get_idade() << endl;
 
     vg1.print_info();
     vg1.Vendedor::print_info();
