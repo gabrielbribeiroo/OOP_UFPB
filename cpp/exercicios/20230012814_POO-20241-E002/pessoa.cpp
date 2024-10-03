@@ -36,3 +36,7 @@ Implementação do método virtual puro.
 // Este método deve ser implementado nas classes derivadas.
 */
 void pessoa::exibir_informacoes() const {}
+
+bool pessoa::operator==(const pessoa &outro) const {
+    return (nome == outro.nome && idade == outro.idade); // Sobrecarga do operador ==
+}
