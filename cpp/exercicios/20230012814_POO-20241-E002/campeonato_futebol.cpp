@@ -1,1 +1,0 @@
-#include "campeonato_futebol.h" // Inclui o cabeçalho correspondente
