@@ -13,6 +13,7 @@
 #include "membro_clube.h" // Inclui o cabeçalho correspondente
 
 membro_clube::membro_clube(const string &n, int i, double s): pessoa(n, i), salario(s) {} // Construtor
+membro_clube::~membro_clube() {} // Destrutor
 
 // Métodos getters e setters
 double membro_clube::get_salario() const {
