@@ -118,6 +118,4 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     bool operator==(const pessoa &outro) const;
 };
 
-int pessoa::contador = 0; // Inicializa o contador estático
-
 #endif // Fim da verificação de inclusão PESSOA_H
