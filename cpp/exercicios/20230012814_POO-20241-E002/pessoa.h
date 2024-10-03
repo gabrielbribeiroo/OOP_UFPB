@@ -19,6 +19,13 @@ using std::cout;
 using std::endl;
 using std::string;
 
+/**
+ * @class pessoa
+ * @brief Classe que representa uma pessoa.
+ *
+ * A classe pessoa mantém informações sobre o nome e a idade da pessoa, 
+ * além de permitir a contagem de objetos criados.
+ */
 class pessoa {
 private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
     string nome; // Nome completo da pessoa
