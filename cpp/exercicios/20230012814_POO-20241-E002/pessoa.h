@@ -54,7 +54,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      *
      * @return string O nome completo da pessoa.
      */
-    std::string get_nome() const;
+    string get_nome() const;
 
     /**
      * @brief Modifica o nome da pessoa.
