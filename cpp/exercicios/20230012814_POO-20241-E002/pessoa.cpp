@@ -1,4 +1,16 @@
-#include "pessoa.h" 
+/**
+ * @file pessoa.cpp
+ * @brief Este arquivo contém a implementação da classe pessoa.
+ * 
+ * A classe pessoa demonstra o uso de Doxygen para documentar
+ * uma classe e seus métodos em C++.
+ * 
+ * @author Gabriel Ribeiro
+ * @version 1.0
+ * @date 2024-10-03
+ */
+
+#include "pessoa.h" // Inclui o cabeçalho correspondente 
 
 int pessoa::contador = 0; // Inicializa o contador estático
 
