@@ -3,7 +3,7 @@
 
 /**
  * @file pessoa.h
- * @brief Este arquivo contém a implementação da classe pessoa.
+ * @brief Este arquivo contém o cabeçalho da classe pessoa.
  * 
  * A classe pessoa demonstra o uso de Doxygen para documentar
  * uma classe e seus métodos em C++.
