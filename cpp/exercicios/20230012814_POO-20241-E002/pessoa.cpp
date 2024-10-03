@@ -42,13 +42,6 @@ int pessoa::get_contador() {
     return contador; // Retorna o contador estático dos objetos da classe pessoa
 }
 
-/*
-Implementação do método virtual puro.
-**Não deve haver uma implementação aqui, pois o método é puro e não pode ter uma implementação na classe base.**
-// Este método deve ser implementado nas classes derivadas.
-*/
-void pessoa::exibir_informacoes() const {}
-
 bool pessoa::operator==(const pessoa &outro) const {
     return (nome == outro.nome && idade == outro.idade); // Sobrecarga do operador ==
 }

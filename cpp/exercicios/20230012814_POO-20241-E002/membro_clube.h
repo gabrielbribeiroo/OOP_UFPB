@@ -24,7 +24,7 @@ using std::ostream;
  * A classe membro_clube mantém informações sobre o nome e a idade da pessoa, 
  * além do salário do membro.
  */
-class membro_clube {
+class membro_clube : public pessoa {
 private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
     double salario; // Salario do membro do clube
 public: // Definição dos atributos de encapsulamento public (acessados dentro e fora da classe)
