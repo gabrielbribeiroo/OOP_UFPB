@@ -13,7 +13,7 @@
  * @date 2024-10-03
  */
 
-// Inclui os cabeçalhos da classe base
+// Inclui os cabeçalhos das classes base
 #include "jogador.h"
 #include "tecnico.h"
 
