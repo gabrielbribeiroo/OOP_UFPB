@@ -46,6 +46,7 @@ void time::registrar_resultado(char r) {
     } else if (r == 'E') {
         pontuacao += 1; // Adiciona 1 ponto para o caso de empate
     }
+    // Derrota não soma pontos
 }
 
 // Exibe as informações do time

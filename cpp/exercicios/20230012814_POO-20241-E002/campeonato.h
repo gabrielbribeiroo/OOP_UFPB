@@ -2,6 +2,9 @@
 #define CAMPEONATO_H // Define um novo cabeçalho
 
 #include <algorithm>
+
+using std::sort;
+
 #include "time.h"
 #include "jogo.h"
 
@@ -16,7 +19,7 @@
 class campeonato {
 private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
     string nome_campeonato; // Nome do campeonato
-    vector<time> times; // Lista de times no campeonato
+    vector<time*> times; // Lista de times no campeonato
     vector<jogo> jogos; // Lista de jogos no campeonato
 public: // Definição dos atributos de encapsulamento public (acessados dentro e fora da classe)
     /**
@@ -52,7 +55,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * 
      * @param t Referência para o objeto time a ser adicionado.
      */
-    void adicionar_time(const time &t);
+    void adicionar_time(time &t); // Aceita o objeto time por referência
 
     /**
      * @brief Adiciona um jogo ao campeonato.

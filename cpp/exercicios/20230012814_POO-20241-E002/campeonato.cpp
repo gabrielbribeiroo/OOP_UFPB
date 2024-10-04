@@ -23,8 +23,8 @@ void campeonato::set_nome_campeonato(const string &n) {
     this->nome_campeonato = n;
 }
 
-void campeonato::adicionar_time(const time &t) {
-    times.push_back(t); // Adiciona o time na pilha
+void campeonato::adicionar_time(time &t) {
+    times.push_back(&t); // Adiciona o ponteiro para o time
 }
 
 void campeonato::adicionar_jogo(const jogo &j) {
@@ -33,16 +33,31 @@ void campeonato::adicionar_jogo(const jogo &j) {
 
 // Exibe a classificação dos times no campeonato.
 void campeonato::exibir_classificacao() const {
+    /*
     vector<time> classificacao = times;
     
     // Ordena os times pela pontuação, do maior para o menor
     std::sort(classificacao.begin(), classificacao.end(), [](const time &a, const time &b) {
         return a.get_pontuacao() > b.get_pontuacao();
     });
+    */
+    /*
+    cout << "Tabela: " << nome_campeonato << "\n";
+    for (const auto &time : times) {
+        cout << time->get_nome() << " - " << time->get_pontuacao() << " pontos\n";
+    }
+    */
+    // Faz uma cópia do vetor de times para não alterar a ordem original
+    vector<time*> times_ordenados = times;
 
-    cout << "Classificação do campeonato: " << nome_campeonato << "\n";
-    for (size_t i = 0; i < classificacao.size(); ++i) {
-        cout << i + 1 << ". " << classificacao[i].get_nome() << " - " 
-                  << classificacao[i].get_pontuacao() << " pontos\n";
+    // Ordena os times por pontuação em ordem decrescente
+    sort(times_ordenados.begin(), times_ordenados.end(), [](time* a, time* b) {
+        return a->get_pontuacao() > b->get_pontuacao();
+    });
+
+    // Exibe os times ordenados pela maior pontuação
+    cout << "Tabela: " << nome_campeonato << "\n";
+    for (const auto &time : times_ordenados) {
+        std::cout << time->get_nome() << " - " << time->get_pontuacao() << " pontos\n";
     }
 }

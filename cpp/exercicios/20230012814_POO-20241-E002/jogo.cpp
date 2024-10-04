@@ -49,20 +49,24 @@ void jogo::set_gols_time_visitante(int g) {
     this->gols_time_visitante = g;
 }
 
-void jogo::registrar_resultado(int gc, int gv) {
-    this->gols_time_casa = gc;
-    this->gols_time_visitante = gv;
-
-    // Verificação de quem fez mais gols para determinar o resultado
-    if (gc > gv) {
-        time_casa->registrar_resultado('V');
-        time_visitante->registrar_resultado('D');
-    } else if (gc < gv) {
-        time_casa->registrar_resultado('D');
-        time_visitante->registrar_resultado('V');
-    } else {
-        time_casa->registrar_resultado('E');
-        time_visitante->registrar_resultado('E');
+void jogo::registrar_resultado(int gols_time_casa, int gols_time_visitante) {
+    this->gols_time_casa = gols_time_casa;
+    this->gols_time_visitante = gols_time_visitante;
+    
+    // Time da casa vence
+    if (gols_time_casa > gols_time_visitante) {
+        time_casa->registrar_resultado('V'); // Vitória para o time da casa
+        time_visitante->registrar_resultado('D'); // Derrota para o visitante
+    }
+    // Time visitante vence
+    else if (gols_time_casa < gols_time_visitante) {
+        time_casa->registrar_resultado('D'); // Derrota para o time da casa
+        time_visitante->registrar_resultado('V'); // Vitória para o visitante
+    }
+    // Empate
+    else {
+        time_casa->registrar_resultado('E'); // Empate
+        time_visitante->registrar_resultado('E'); // Empate
     }
 }
 
