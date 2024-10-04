@@ -71,7 +71,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      *
      * @note Este método deve ser sobrescrito em todas as classes derivadas.
      */
-    virtual double calcular_salario() = 0;
+    virtual double calcular_salario() const = 0;
 
     /**
      * @brief Sobrecarga do operador de saída para exibir informações de um membro do clube.

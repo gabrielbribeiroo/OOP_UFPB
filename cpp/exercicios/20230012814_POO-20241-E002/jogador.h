@@ -27,9 +27,9 @@ class jogador : public membro_clube {
 private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
     string posicao; // Posição do jogador (goleiro, zagueiro, meio-campo, atacante)
     int gols_marcados; // Número total de gols marcados pelo jogador
-public:
+public: // Definição dos atributos de encapsulamento public (acessados dentro e fora da classe)
     /**
-     * @brief Construtor que inicializa os atributos da classe Jogador.
+     * @brief Construtor que inicializa os atributos da classe jogador.
      * 
      * @param nome Nome do jogador.
      * @param idade Idade do jogador.
@@ -79,7 +79,7 @@ public:
      * 
      * @return Salário total do jogador, incluindo o bônus por gols.
      */
-    double calcular_salario() const;
+    double calcular_salario() const override;
 
     /**
      * @brief Sobrecarga do operador < para comparar jogadores pelo número de gols marcados.
