@@ -13,7 +13,7 @@
  * @date 2024-10-03
  */
 
-#include "pessoa.h" // // Inclui o cabeçalho da classe base
+#include "pessoa.h" // Inclui o cabeçalho da classe base
 
 /**
  * @class juiz
@@ -24,10 +24,9 @@
  */
 
 class juiz : public pessoa {
-private:
-    int partidas_arbitradas; ///< Número total de partidas arbitradas pelo juiz
-
-public:
+private: // Definição dos atributos de encapsulamento private (acessados somente dentro da classe)
+    int partidas_arbitradas; // Número total de partidas arbitradas pelo juiz
+public: // Definição dos atributos de encapsulamento public (acessados dentro e fora da classe)
     /**
      * @brief Construtor que inicializa os atributos da classe juiz.
      * 
