@@ -70,6 +70,13 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     double calcular_salario() const override;
 
     /**
+     * @brief Exibe as informações detalhadas do técnico-jogador.
+     * 
+     * Implementa o método virtual puro da classe base pessoa.
+     */
+    void exibir_informacoes() const override;
+
+    /**
      * @brief Sobrecarga do operador de saída para exibir informações detalhadas do técnico-jogador.
      *
      * Este operador permite exibir informações completas de um técnico-jogador, incluindo nome, idade, salário, 

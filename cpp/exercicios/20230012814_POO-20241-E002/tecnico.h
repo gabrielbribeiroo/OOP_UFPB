@@ -63,6 +63,13 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * @return double O salário total do técnico.
      */
     double calcular_salario() const override;
+
+    /**
+     * @brief Exibe as informações detalhadas do técnico.
+     * 
+     * Implementa o método virtual puro da classe base pessoa.
+     */
+    void exibir_informacoes() const override;
 };
 
 #endif // Fim da verificação de inclusão TECNICO_H

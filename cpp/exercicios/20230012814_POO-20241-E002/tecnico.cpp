@@ -28,3 +28,9 @@ void tecnico::set_experiencia(int e) {
 double tecnico::calcular_salario() const {
     return get_salario() + (experiencia * 200); // Calcula o salário do técnico
 }
+
+void tecnico::exibir_informacoes() const {
+    std::cout << "Nome: " << get_nome() << ", Idade: " << get_idade()
+              << ", Salário: " << calcular_salario() << ", Experiência: "
+              << experiencia << " anos.\n";
+}

@@ -34,6 +34,12 @@ double jogador::calcular_salario() const {
     return get_salario() + (gols_marcados * 100); // Salário + bônus por gols marcados
 }
 
+void jogador::exibir_informacoes() const {
+    cout << "Nome: " << get_nome() << ", Idade: " << get_idade()
+              << ", Posição: " << posicao << ", Gols Marcados: " << gols_marcados
+              << ", Salário Total: " << calcular_salario() << "\n";
+}
+
 bool jogador::operator<(const jogador &outro) const {
     return this->gols_marcados < outro.gols_marcados; // Sobrecarga do operador <
 }

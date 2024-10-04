@@ -28,6 +28,14 @@ double tecnico_jogador::calcular_salario() const {
     return jogador::calcular_salario() + tecnico::calcular_salario() + bonus_duplo_papel; // Calcular a soma dos salários
 }
 
+// Exibe as informações do técnico-jogador
+void tecnico_jogador::exibir_informacoes() const {
+    cout << "Nome: " << jogador::get_nome() << ", Idade: " << jogador::get_idade()
+              << ", Posição: " << get_posicao() << ", Gols Marcados: " << get_gols_marcados()
+              << ", Experiência: " << get_experiencia() << " anos, Salário Total: "
+              << calcular_salario() << ", Bônus Duplo Papel: " << bonus_duplo_papel << "\n";
+}
+
 // Sobrecarga do operador <<
 ostream &operator<<(ostream &os, const tecnico_jogador &t) {
     // Por se tratarem da mesma pessoa, para resolver a ambiguidade, selecionei o nome e idade pela classe jogador

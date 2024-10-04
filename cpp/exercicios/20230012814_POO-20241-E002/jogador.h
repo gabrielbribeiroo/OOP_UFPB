@@ -82,6 +82,13 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     double calcular_salario() const override;
 
     /**
+     * @brief Exibe as informações detalhadas do jogador.
+     * 
+     * Implementa o método virtual puro da classe base pessoa.
+     */
+    void exibir_informacoes() const override;
+
+    /**
      * @brief Sobrecarga do operador < para comparar jogadores pelo número de gols marcados.
      * 
      * @param outro Outro jogador a ser comparado.
