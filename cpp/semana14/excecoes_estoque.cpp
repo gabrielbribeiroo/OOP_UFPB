@@ -1,21 +1,27 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
 #include <stdexcept>
+#include <cstdlib>
+#include <ctime>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::cerr;
 using std::string;
 using std::vector;
 using std::exception;
+using std::ostream;
+using std::srand;
+using std::rand;
+using std::time;
 
 class produto_nao_encontrado : public exception {
 public:
 	const char *what() const noexcept {
 		return "produto nao encontrado!";
 	}
-
 };
 
 class quantidade_insuficiente : public exception {
@@ -39,81 +45,167 @@ class produto {
 	double preco;
 public:
 	produto(int i, const string &n, int q, double p): id(i), nome(n), qtd(q), preco(p) {}
-    ~produto() {}
 
-    int get_id() const {
-        return id;
-    }
+	int get_qtd() const {
+		return qtd;
+	}
 
-    void set_id(int i) {
-        id = i;
-    }
+	void set_qtd(int q) {
+		qtd = q;
+	}
 
-    string get_nome() const {
-        return nome;
-    }
+	int get_id() const {
+		return id;
+	}
 
-    void set_nome(const string &n) {
-        nome = n;
-    }
+	const string &get_nome() const {
+		return nome;
+	}
 
-    int get_qtd() const {
-        return qtd;
-    }
-
-    void set_qtd(int q) {
-        qtd = q;
-    }
-
-    double get_preco() const {
-        return preco;
-    }
-
-    void set_preco(double p) {
-        preco = p;
-    }
+	double get_preco() const {
+		return preco;
+	}
 };
 
 class estoque {
 	vector<produto> produtos;
 public:
-	void adicionar_produto(const produto &p) noexcept {}
-
-	void remover_produto(int i) {
-		if (i < 0) {
-			throw new quantidade_invalida();
-		} 
-        else if (i == 999) {
-			throw new produto_nao_encontrado();
-		}
+	void adicionar_produto(const produto &p) noexcept {
+		produtos.push_back(p);
+		cout << "[estoque] Produto: " << p.get_nome();
+		cout << " adicionado ao estoque!" << endl;
 	}
 
-	void atualizar_quantidade(int i, int q) {
-		if (i < 0) {
-			throw new quantidade_invalida();
-		} 
-        else if (i == 888) {
-			throw new quantidade_insuficiente();
+	void remover_produto(int search_id) {
+		for (auto it = produtos.begin(); it != produtos.end(); ++it) {
+			if (it->get_id() == search_id) {
+				cout << "[estoque] Produto: " << it->get_nome();
+				cout << "(" << it->get_id() << ") ";
+				cout << "foi removido do estoque!" << endl;
+				produtos.erase(it);
+				return;
+			}
 		}
+		throw produto_nao_encontrado();
 	}
 
-	void consultar_produto(int i) {
-		if (i == 555) {
-			throw new produto_nao_encontrado();
+	void atualizar_quantidade(int search_id, int q) {
+		if (q <= 0) {
+			throw quantidade_invalida();
 		}
+
+		for (auto &p : produtos) {
+			if (p.get_id() == search_id) {
+				if (q > p.get_qtd()) {
+					throw quantidade_insuficiente();
+				}
+				p.set_qtd(p.get_qtd() - q); //atualiza qtd
+				cout << "[estoque] Produto " << p.get_nome();
+				cout << " com estoque atualizado para: ";
+				cout << p.get_qtd() << endl;
+				return;
+			}
+		}
+
+		throw produto_nao_encontrado();
+	}
+
+	void consultar_produto(int search_id) {
+		for (auto& p : produtos) {
+			if (p.get_id() == search_id) {
+				cout << "[estoque] Produto: " << p.get_nome();
+				cout << " (" << p.get_id() << ") " << endl;
+				cout << "Preco: " << p.get_preco() << endl;
+				cout << "Estoque: " << p.get_qtd() << endl;
+				cout << "-------------------" << endl;
+				return;
+			}
+		}
+		throw produto_nao_encontrado();
+	}
+
+	friend ostream &operator<<(ostream &os, const estoque &e) {
+		os << "[estoque] Estoque geral: " << endl;
+		os << "-------------------" << endl;
+		for (auto &p : e.produtos) {
+                                os << "Produto: " << p.get_nome();
+                                os << " (" << p.get_id() << ") " << endl;
+                                os << "Preco: " << p.get_preco() << endl;
+                                os << "Estoque: " << p.get_qtd() << endl;
+                                os << "-------------------" << endl;
+		}
+
+		return os;
 	}
 };
 
+void lanca_excecao_desconhecida() {
+	srand(time(nullptr));
+
+	int rand_num = rand() % 3;
+
+	switch(rand_num) {
+		case 0: {
+			throw 1000;
+		}
+		case 1: {
+			throw 0.50;
+		}
+		case 2: {
+			throw exception();
+		}
+	}
+}
+
 int main() {
-	estoque e;
+	estoque estoque_geral;
 
 	try {
-		produto p(10, "sabao", 10, 5.5);
-		e.adicionar_produto(p);
-		e.remover_produto(-10);
-		e.consultar_produto(555);
-	} 
-    catch(exception *e) {
-		cout << e->what() << endl;
+		estoque_geral.adicionar_produto(produto(1, "Caneta", 100, 3.50));
+		estoque_geral.adicionar_produto(produto(2, "Caderno", 50, 15.40));
+		estoque_geral.adicionar_produto(produto(3, "Borracha", 80, 2.20));
+		estoque_geral.adicionar_produto(produto(4, "Lapis", 120, 3.00));
+
+		cout << estoque_geral;
+		//estoque_geral.atualizar_quantidade(1, -20);  //1
+
+		estoque_geral.atualizar_quantidade(3, 40);     //2
+		//estoque_geral.atualizar_quantidade(1, 110);  //3
+
+		estoque_geral.atualizar_quantidade(2, 20);     //4
+		//estoque_geral.atualizar_quantidade(12, 100); //5
+
+		estoque_geral.atualizar_quantidade(2, 10);     //6
+		//estoque_geral.remover_produto(10);           //7
+
+		estoque_geral.remover_produto(4);              //8
+		//estoque_geral.consultar_produto(11);         //9
+
+		estoque_geral.consultar_produto(2);            //10
+		lanca_excecao_desconhecida();                  //11
 	}
+	catch (const produto_nao_encontrado &e) {
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+		cerr << e.what() << endl;
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+	}
+	catch (const quantidade_invalida &e) {
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+		cerr << e.what() << endl;
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+	}
+	catch (const quantidade_insuficiente e) {
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+		cerr << e.what() << endl;
+		cerr << "!!!!!!!!!!!!!!!" << endl;
+	}
+	catch (...) {
+		cerr << "!!!!!!!!!!!!!!!!" << endl;
+		cerr << "Erro inesperado!" << endl;
+		cerr << "!!!!!!!!!!!!!!!!" << endl;
+	}
+
+	cout << estoque_geral << endl;
+
+	return 0;
 }
