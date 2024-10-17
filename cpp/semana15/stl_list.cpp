@@ -5,7 +5,7 @@ using std::cout;
 using std::endl;
 using std::list;
 
-int main(void) {
+int main() {
 	list<int> numbers = {1, 2, 3, 4, 5};
 
 	numbers.push_back(6);
@@ -27,7 +27,7 @@ int main(void) {
 
         cout << endl;
     */
-   
+
 	for (list<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) {
 		*it *= 10;
 		cout << *it << " ";
