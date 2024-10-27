@@ -88,7 +88,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * 
      * @param empresa Referência para outra empresa a ser adicionada.
      * 
-     * @return sala Adiciona outra empresa para a mesma sala.
+     * @return sala& Referência à própria sala após a inserção da empresa.
      */
     sala &operator+(const empresa &empresa);
     
@@ -97,7 +97,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * 
      * @param empresa Referência para outra empresa a ser removida.
      * 
-     * @return sala Remove uma empresa da lista de sua respectiva sala.
+     * @return sala& Referência à própria sala após a remoção da empresa.
      */
     sala &operator-(const empresa &empresa);
 };
