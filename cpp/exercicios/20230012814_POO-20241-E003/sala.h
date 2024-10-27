@@ -63,14 +63,14 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     /**
      * @brief Retorna a lista de empresas associadas à sala.
      * 
-     * @return std::vector<empresa> Vetor contendo as empresas locatárias.
+     * @return std::vector<empresa> Um vetor contendo as empresas locatárias.
      */
     vector<empresa> get_empresas() const;
 
     /**
      * @brief Método virtual puro para calcular o preço da sala.
      * 
-     * @return double Preço calculado da sala, com base em suas características.
+     * @return double O preço calculado da sala, com base em suas características.
      */
     virtual double calcula_preco() const = 0;
 
