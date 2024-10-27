@@ -21,8 +21,8 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     /**
      * @brief Construtor que inicializa os atributos da classe empresa e lança uma exceção para idade negativa.
      * 
-     * @param n Nome da empresa. 
-     * @param i Idade da empresa.
+     * @param nome Nome da empresa. 
+     * @param idade Idade da empresa.
      */
     empresa(const string &nome, int idade);
 
@@ -41,7 +41,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     /**
      * @brief Define o nome da empresa.
      * 
-     * @param n O nome a ser definido para a empresa.
+     * @param nome O nome a ser definido para a empresa.
      */
     void set_nome(const string &nome);
 
@@ -55,7 +55,7 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     /**
      * @brief Define a idade da empresa e lança uma exceção caso a idade lançada for negativa.
      * 
-     * @param i A idade a ser definida para a empresa.
+     * @param idade A idade a ser definida para a empresa.
      */
     void set_idade(int idade);
 
