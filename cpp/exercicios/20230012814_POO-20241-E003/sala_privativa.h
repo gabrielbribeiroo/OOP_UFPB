@@ -29,6 +29,20 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
     ~sala_privativa();
 
     /**
+     * @brief Obtém a capacidade máxima de pessoas.
+     * 
+     * @return int O número da capacidade máxima de pessoas da sala.
+     */
+    int get_capacidade() const;
+
+    /**
+     * @brief Define a capacidade da sala.
+     * 
+     * @param capacidade O número a ser definido para a capacidade da sala.
+     */   
+    void set_capacidade(int capacidade);
+
+    /**
      * @brief Implementa o cálculo de preço específico para sala privativa.
      * 
      * @return double O preço calculado com base na capacidade máxima de pessoas.
