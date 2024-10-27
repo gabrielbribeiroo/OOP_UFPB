@@ -9,7 +9,7 @@ using std::string;
  * @class empresa
  * @brief Representa uma empresa locatária.
  *
- * A classe campeonato mantém informações sobre o nome e a idade da empresa. 
+ * A classe empresa mantém informações sobre o nome e a idade da empresa. 
  * Também possui métodos para tratamento de exceções, e sobrecarrega o operador < para comparar 
  * a idade de duas empresas.
  */
