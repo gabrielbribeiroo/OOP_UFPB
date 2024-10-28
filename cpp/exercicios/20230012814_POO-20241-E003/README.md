@@ -68,7 +68,7 @@ Sala 102 no andar 2:
 - `main.cpp (Arquivo principal)`
 
 ## Autor
-- *Gabriel Ribeiro*
+- *Gabriel Barbosa Ribeiro de Oliveira*
 
 ### Pontos a Considerar:
 - O README inclui uma descrição clara do projeto, suas funcionalidades e instruções detalhadas de como compilar e rodar o programa.
