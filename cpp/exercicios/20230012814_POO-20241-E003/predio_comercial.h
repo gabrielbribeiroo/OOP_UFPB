@@ -39,6 +39,20 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * listadas por ordem de idade (empresas mais antigas aparecem primeiro).
      */
     void listar_salas() const;
+
+    /**
+     * @brief Busca uma sala pelo número especificado.
+     *
+     * Este método percorre a lista de salas no prédio e compara o número de cada sala
+     * com o número fornecido como parâmetro. Se uma sala com o número correspondente
+     * for encontrada, o método retorna um ponteiro para essa sala. Caso contrário,
+     * retorna um ponteiro nulo (nullptr), indicando que não houve correspondência.
+     *
+     * @param n Número da sala que se deseja encontrar.
+     * 
+     * @return sala* Ponteiro para a sala encontrada; nullptr se a sala não for encontrada.
+     */
+    sala *buscar_sala_por_numero(int numero) const;
 };
 
 #endif // Fim da verificação de inclusão PREDIOCOMERCIAL_H

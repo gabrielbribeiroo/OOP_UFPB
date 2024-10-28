@@ -53,3 +53,15 @@ void predio_comercial::listar_salas() const {
         }
     }
 }
+
+sala *predio_comercial::buscar_sala_por_numero(int n) const {
+    // Percorre cada ponteiro de sala na lista_de_salas
+    for (sala *sala : lista_de_salas) {
+        // Compara o número da sala com o número especificado
+        if (sala->get_numero() == n) {
+            return sala; // Retorna a sala se o número corresponder
+        }
+    }
+    
+    return nullptr;  // Retorna nullptr se a sala não for encontrada
+}
