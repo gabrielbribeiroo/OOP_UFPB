@@ -42,26 +42,30 @@ Após a compilação, execute o sistema com o comando:
 
 
 ## Exemplo de Saída
+```bash
 Sala 101 no andar 1:
  - Empresa: Tech Corp, Idade: 15 anos
 Sala 102 no andar 2:
  - Empresa: Health Solutions, Idade: 5 anos
+```
 
 ## Estrutura de Diretórios
-├── include/            # Arquivos de cabeçalho (.h)
-│   ├── empresa.h
-│   ├── sala.h
-│   ├── sala_privativa.h
-│   ├── sala_compartilhada.h
-│   └── predio_comercial.h
-├── src/                # Arquivos de implementação (.cpp)
-│   ├── empresa.cpp
-│   ├── sala.cpp
-│   ├── sala_privativa.cpp
-│   ├── sala_compartilhada.cpp
-│   └── predio_comercial.cpp
-├── main.cpp            # Arquivo principal
-└── README.md           # Documentação do projeto
+### Arquivos de cabeçalho (.h)
+#### include/        
+- `empresa.h`
+- `sala.h`
+- `sala_privativa.h`
+- `sala_compartilhada.h`
+- `predio_comercial.h`
+
+### Arquivos de implementação (.cpp)
+#### src/                
+- `empresa.cpp`
+- `sala.cpp`
+- `sala_privativa.cpp`
+- `sala_compartilhada.cpp`
+- `predio_comercial.cpp`
+- `main.cpp (Arquivo principal)`
 
 ## Autor
 - *Gabriel Ribeiro*
