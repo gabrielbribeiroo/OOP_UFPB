@@ -40,3 +40,8 @@ void empresa::set_idade(int i) {
 bool empresa::operator<(const empresa &outro) const {
     return idade_da_empresa < outro.idade_da_empresa; // Se a empresa é mais antiga que a outra ou não
 }
+
+// Sobrecarga do operador == que compara dois atributos de duas empresas
+bool empresa::operator==(const empresa &outro) const {
+    return (this->nome_da_empresa == outro.nome_da_empresa) && (this->idade_da_empresa == outro.idade_da_empresa); // Se as empresas são iguais
+}

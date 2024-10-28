@@ -67,6 +67,15 @@ public: // Definição dos atributos de encapsulamento public (acessados dentro 
      * @return bool Comparação de qual empresa é mais nova.
      */
     bool operator<(const empresa &outro) const;
+
+    /**
+     * @brief Sobrecarga do operador de igualdade para comparação de duas empresas.
+     * 
+     * @param outro Referência para outra empresa a ser comparada.
+     * 
+     * @return bool Comparação dos atributos das empresas.
+     */
+    bool operator==(const empresa &outro) const;
 };
 
 #endif // Fim da verificação de inclusão EMPRESA_H
