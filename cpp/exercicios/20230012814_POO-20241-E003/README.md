@@ -11,17 +11,18 @@ O **Sistema de Controle de Locação de Salas Comerciais** é um projeto em C++ 
 - **Organização de dados**:
   - Ordenação de salas por andar (salas em andares inferiores aparecem primeiro).
   - Ordenação de empresas por idade (empresas mais antigas aparecem primeiro).
+- **Menu interativo**: Usuário digita a opção que deseja realizar para gerenciar o sistema.
 
 ## Estrutura do Projeto
 
 O projeto está dividido nos seguintes arquivos:
 
 - `main.cpp`: Arquivo principal que gerencia o fluxo do programa.
-- `Empresa.h / Empresa.cpp`: Define e implementa a classe **Empresa**, que representa uma empresa locatária, com nome e idade.
-- `Sala.h / Sala.cpp`: Define e implementa a classe abstrata **Sala**, que representa uma sala e inclui o número, andar e empresas associadas.
-- `SalaPrivativa.h / SalaPrivativa.cpp`: Implementa a classe **SalaPrivativa**, uma sala com capacidade máxima de pessoas.
-- `SalaCompartilhada.h / SalaCompartilhada.cpp`: Implementa a classe **SalaCompartilhada**, uma sala com número de estações de trabalho disponíveis.
-- `PredioComercial.h / PredioComercial.cpp`: Define e implementa a classe **PredioComercial**, responsável por gerenciar as salas e exibir suas informações.
+- `empresa.h / empresa.cpp`: Define e implementa a classe **Empresa**, que representa uma empresa locatária, com nome e idade.
+- `sala.h / sala.cpp`: Define e implementa a classe abstrata **Sala**, que representa uma sala e inclui o número, andar e empresas associadas.
+- `sala_privativa.h / sala_privativa.cpp`: Implementa a classe **SalaPrivativa**, uma sala com capacidade máxima de pessoas.
+- `sala_compartilhada.h / sala_compartilhada.cpp`: Implementa a classe **SalaCompartilhada**, uma sala com número de estações de trabalho disponíveis.
+- `predio_comercial.h / predio_comercial.cpp`: Define e implementa a classe **PredioComercial**, responsável por gerenciar as salas e exibir suas informações.
 
 ## Como Compilar e Executar
 
@@ -30,12 +31,14 @@ Para compilar o projeto, certifique-se de que todos os arquivos `.cpp` estão in
 
 ```bash
 g++ -o sistema main.cpp Empresa.cpp Sala.cpp SalaPrivativa.cpp SalaCompartilhada.cpp PredioComercial.cpp
+```
 
 ### Execução
 Após a compilação, execute o sistema com o comando:
 
 ```bash
 ./sistema
+```
 
 
 ## Exemplo de Saída
