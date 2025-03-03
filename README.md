@@ -23,4 +23,7 @@ This repository contains exercise codes for the Object-Oriented Programming disc
   <img align = "top" alt = "gabrielbribeiroo_PowerShell" height = "50" width = "50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" /> 
 </div>
 
+## License
+This project is licensed under the MIT License.
+
 
